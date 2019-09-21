@@ -1,16 +1,16 @@
 function Claster(){
     this.idElement = "can";
-    this.radius = 100;
-    this.outCounterColor = "rgba(36,34,34,1)";
-    this.innerCounterColor = "rgba(36,34,34,1)";
-    this.outBackgroundColor = "rgba(100,100,100,0)";
-    this.innerBackgroundColor = "rgba(88,86,86,1)";
-    this.valueBackgroundColor = "rgba(98,96,96,1)";
-    this.textColor = "rgba(100,0,83,1)";
-    this.cricleColor = "rgba(100,0,0,1)";
-    this.lineColor = "rgba(0,0,0,1)";
-    this.cricleRadius = 2;
-    this.maxValue = 100;
+    this.radius = 100; // radius of lines from center
+    this.outCounterColor = "rgba(36,34,34,1)"; // color of out counter
+    this.innerCounterColor = "rgba(36,34,34,1)"; // color of values counter
+    this.outBackgroundColor = "rgba(100,100,100,0)"; // color of cnavas background
+    this.innerBackgroundColor = "rgba(88,86,86,1)"; // color of background in out counter
+    this.valueBackgroundColor = "rgba(98,96,96,1)"; // color of background in values counter
+    this.textColor = "rgba(100,0,83,1)"; // color of text
+    this.cricleColor = "rgba(100,0,0,1)"; // color of cricles
+    this.lineColor = "rgba(0,0,0,1)"; // color of lines from center
+    this.cricleRadius = 2; // radius of cricles
+    this.maxValue = 100; // max of values
     this.types = [function (x,y,xB,yB,center,ctx) {
         ctx.moveTo(xB, yB);
         ctx.lineTo(x,y);
@@ -21,7 +21,7 @@ function Claster(){
        ctx.moveTo(center,center);
        ctx.lineTo(x,y);
     }];
-    this.type = 0;
+    this.type = 0; // type of claste (0,1,2)
 
     this.generate = function (content,value) {
             var can = document.getElementById(this.idElement);
